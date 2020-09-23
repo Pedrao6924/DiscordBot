@@ -40,9 +40,21 @@ bot.on('message' , message =>{
 
         bot.commands.get('play').execute(message , args);             
 
-    }else if(command === "lembrete"){
+    }else if(command === "memo"){
 
-        bot.commands.get('lembrete').execute(message , args);             
+        bot.commands.get('memo').execute(message , args);             
+
+    }else if(command === "event"){
+
+        bot.commands.get('event').execute(message , args);             
+
+    }else if(command === "dailynews"){
+
+        bot.commands.get('dailyAnnouncements').execute(message , args);             
+
+    }else if(command === "help"){
+
+        bot.commands.get('help').execute(message , args);             
 
     }else{
 
