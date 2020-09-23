@@ -1,13 +1,14 @@
-const Discord = require('discord.js');
-const bot = new Discord.Client();
+const {Client , Collection} = require('discord.js');
+const bot = new Client();
 
-const token = 'NzU4MDg0MzYwOTEzMjg5Mjc2.X2pzFA.HbZTvK1SoRhAOJKZkd5f6-Flv7Q';
+
+const config = require('./config.json');
 
 const prefix = '!!';
 
 const fs = require('fs');
 
-bot.commands = new Discord.Collection();
+bot.commands = new Collection();
  
 const commandFlies = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
 
@@ -63,7 +64,7 @@ bot.on('message' , message =>{
     }
 
 });
-bot.login(token);
+bot.login(config.token);
 
 
 

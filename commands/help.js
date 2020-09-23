@@ -21,6 +21,7 @@ module.exports = {
 
             message.channel.send("Digite um comando apos o !!help")
 
+
         }
     }
 }
