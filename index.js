@@ -40,6 +40,14 @@ bot.on('message' , message =>{
 
         bot.commands.get('play').execute(message , args);             
 
+    }else if(command === "lembrete"){
+
+        bot.commands.get('lembrete').execute(message , args);             
+
+    }else{
+
+        bot.commands.get('notYetDeveloped').execute(message , args);  
+
     }
 
 });
